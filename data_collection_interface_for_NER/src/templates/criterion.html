@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block body %}
+<head>
+    <script>
+        if ("{{not_found}}" == "1"){
+            window.alert("article not found for selected criteria");
+        }
+
+    </script>
+
+    <style>
+
+    .container{
+        background-color : white;
+        height : 100%;
+        width : auto;
+        padding : 18px;
+
+    }
+	body {
+      background-color: Gray;
+      background-repeat: no-repeat;
+    }
+    button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: auto;
+    }
+	div {
+  	    border-radius: 5px;
+  	    background-color: dodgerblue;
+  	    padding: 20px;
+    }
+	select {
+        width: auto;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+	label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+<div class = 'container'>
+<form method="POST" action="{{url_for('select_criteria')}} " align="center">
+	<label for="language"><b>Choose a Language:</b></label>
+	<select name = language>
+        <button class="dropbtn">Language</button>
+                {% for lang in language %}
+                <option value= "{{lang}}" >{{lang}}</option>
+                {% endfor %}
+        </select></p>
+    <p>
+	<label for="publisher"><b>Choose a Publisher:</b></label>
+	<select name = publisher>
+        <button class="dropbtn">Publisher</button>
+                {% for publ in publisher %}
+                <option value= "{{publ}}" SELECTED>{{publ}}</option>
+                {% endfor %}
+        </select>
+<br>
+    <button type = 'submit'>Submit</button>
+</form>
+</div>
+</body>
+
+{%endblock%}

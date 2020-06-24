@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+{% block body %}
+<head>
+    {{ JSGlue.include() }}
+    <style>
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+        div.checkboxes {
+            display:inline-block;
+            width = auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var entity_color_dict = {
+        'PERSON': '#F08080', 'NORP': '#FF0000', 'FAC': '#FFB6C1',
+           'ORG': '#DB7093', 'GPE': '#FF4500', 'LOC': '#FF7F50', 'PRODUCT': '#FFA500', 'EVENT': '#FFD700',
+            'WORK_OF_ART': '#FFEFD5', 'LAW': '#F0E68C', 'LANGUAGE': '#EE82EE', 'DATE': '#9370DB',
+             'TIME': '#ADFF2F', 'PERCENT': '#00FF00', 'MONEY': '#90EE90', 'QUANTITY': '#9ACD32',
+              'ORDINAL': '#20B2AA', 'CARDINAL': '#F4A460'}
+
+
+        function set_bgc_method(features, spans, spans_start_index, id, entity_color_dict){
+            for (let key in features){
+                var span_array = features[key].span;
+                for(var i = 0; i < span_array.length; i++){
+                    var x = -1;
+                    for(var j = 0; j < spans_start_index.length; j++){
+                        if(spans_start_index[j] > span_array[i][0]){x = j-1;break;}
+                    }
+                    if(x == -1) x = spans_start_index.length - 1;
+                    var temp_str = spans[x];
+                    var st = span_array[i][0] - spans_start_index[x];
+                    var fin = span_array[i][1] - spans_start_index[x];
+                    if(st == 0){
+                        spans[x] = temp_str.substring(st, fin);
+                        spans.splice(x + 1, 0, temp_str.substring(fin));
+                        spans_start_index.splice(x + 1, 0, span_array[i][1]);
+                    }
+                    else if(fin == temp_str.length){
+                        spans[x] = temp_str.substring(0, st);
+                        spans.splice(x + 1, 0, temp_str.substring(st, fin));
+                        spans_start_index.splice(x + 1, 0, span_array[i][0]);
+                    }
+                    else{
+                        spans[x] = temp_str.substring(0, st);
+                        spans.splice(x + 1, 0, temp_str.substring(st, fin), temp_str.substring(fin));
+                        spans_start_index.splice(x + 1, 0, span_array[i][0], span_array[i][1]);
+                    }
+
+                }
+            }
+            var para = document.getElementById(id);
+            var set_bgc_for_span = []
+            for(var x = 0; x < spans.length; x++){
+                var color = "white";
+                if(spans[x] in features){
+                    if(features[spans[x]].entity_type in entity_color_dict){
+                        color = entity_color_dict[features[spans[x]].entity_type];
+                        var sp = "<span style='background-color: " + color + ";'>" + spans[x] + "</span>";
+                        set_bgc_for_span.push(sp);
+                    }
+                }
+                else{
+                    var sp = "<span style='background-color: " + color + ";'>" + spans[x] + "</span>";
+                    set_bgc_for_span.push(sp);
+                }
+            }
+            para.innerHTML = set_bgc_for_span.join(" ");
+        }
+
+    </script>
+</head>
+<body>
+
+<form name = 'myForm' method = 'POST' id = 'myForm' ><!--action = "{{url_for('display_article')}}"-->
+    <div class = 'container'>
+        <div class = 'leftbox' >
+            <h1>HEADLINE</h1>
+            <p id = "headline"></p>
+            <h1>ARTICLE</h1>
+            <p id = "article"></p><hr>
+        </div>
+    </div>
+    <div id = 'checkboxes' >
+        <h1>tick the boxes as appropriate</h1>
+    </div>
+    <button  name = "submit" id = "submit">Submit and View Next</button>
+
+</form>
+    <button type = 'button'  onclick="next_article()"  id = "next_article" >View Next</button>
+<script type="text/javascript" defer >
+function next_article(){
+    window.location = Flask.url_for("display_article", {});
+}
+function decodeHTML(annotation_data) {
+    var txt = document.createElement("textArea");
+    txt.innerHTML = annotation_data;
+    return txt.value;
+}
+    var annotation_data = "{{annotation_data_json}}";
+    annotation_data = JSON.parse(decodeHTML(annotation_data));
+
+    headline = annotation_data[0];  article = annotation_data[1];
+    headline_text = headline["headline"];   article_text = article["full_text"];
+    headline_features = headline["features"];   article_features = article["features"];
+
+    var text = article_spans = [], article_spans_start_index = [];
+    text[0] = article_spans[0] = article_text; article_spans_start_index[0] = 0;
+    var headline_spans = [], headline_spans_start_index = [];
+    headline_spans[0] = headline_text; headline_spans_start_index[0] = 0;
+
+    set_bgc_method(article_features, article_spans, article_spans_start_index, 'article', entity_color_dict);
+    set_bgc_method(headline_features, headline_spans, headline_spans_start_index, 'headline', entity_color_dict);
+
+
+    var curDiv = document.querySelector('#checkboxes');
+    for(entityType in entity_color_dict){
+        var checkDiv = document.createElement('div');
+        checkDiv.id = entityType + 'CheckboxDiv';
+        var i = 0;
+        var h3 = document.createElement('h3');
+        h3.appendChild(document.createTextNode('Pick the '+ entityType));
+        checkDiv.class = 'checkboxes'
+        for(key in article_features){
+            if(article_features[key].entity_type == entityType){
+                var Checkbox = document.createElement('input');
+                if(i == 0)checkDiv.appendChild(h3);
+                Checkbox.type = "checkbox";
+                Checkbox.name = entityType + "Checkbox";
+                Checkbox.value = key;
+                Checkbox.id = key + i;
+                var label = document.createElement('label'), hr = document.createElement('br');
+                label.htmlFor = key + i;
+                label.appendChild(document.createTextNode(' '+key+' '));
+                checkDiv.appendChild(Checkbox);
+                checkDiv.appendChild(label);
+                checkDiv.appendChild(hr);
+                i++;
+            }
+        }
+        curDiv.appendChild(checkDiv);
+    }
+
+
+    $('#submit').click(function() {
+        var entity_color_dict = window.entity_color_dict;
+        alert(entity_color_dict);
+        console.log("on click");
+        var arrCB = {};
+
+        for(entityType in entity_color_dict){
+            console.log(entity_color_dict);
+            arrCB[entityType] = [];
+            var inputString = "input[name='" + entityType + "Checkbox']:checked";
+            console.log(inputString);
+            $(inputString).each(
+                function(){
+                    if(this.checked) arrCB[entityType].push(this.value);
+                }
+            );
+        }
+        var data = JSON.stringify(arrCB);
+        var formInfo = document.forms['myForm'];
+        formInfo.elements["submit"].value = data;
+        alert(data);
+        window.location = Flask.url_for("display_article", {});
+    });
+
+
+</script>
+
+</body>
+
+{% endblock %}
+

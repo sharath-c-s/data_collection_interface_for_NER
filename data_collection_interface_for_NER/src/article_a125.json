@@ -1,0 +1,818 @@
+[
+    {
+        "features": {
+            "Boeing": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        0,
+                        6
+                    ]
+                ]
+            },
+            "India": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        12,
+                        17
+                    ]
+                ]
+            }
+        },
+        "headline": "Boeing says India is critical to its international growth plans"
+    },
+    {
+        "features": {
+            "114": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        466,
+                        469
+                    ]
+                ]
+            },
+            "200": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        3717,
+                        3720
+                    ]
+                ]
+            },
+            "3,500": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        4315,
+                        4320
+                    ]
+                ]
+            },
+            "35": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        731,
+                        733
+                    ]
+                ]
+            },
+            "4,000": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        5150,
+                        5155
+                    ]
+                ]
+            },
+            "Apache": {
+                "entity_type": "PRODUCT",
+                "span": [
+                    [
+                        3561,
+                        3567
+                    ],
+                    [
+                        3806,
+                        3812
+                    ]
+                ]
+            },
+            "April": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        402,
+                        407
+                    ]
+                ]
+            },
+            "Bengaluru": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        5086,
+                        5095
+                    ]
+                ]
+            },
+            "Boeing": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        19,
+                        25
+                    ],
+                    [
+                        265,
+                        271
+                    ],
+                    [
+                        789,
+                        795
+                    ],
+                    [
+                        1035,
+                        1041
+                    ],
+                    [
+                        3467,
+                        3473
+                    ],
+                    [
+                        3839,
+                        3845
+                    ],
+                    [
+                        4060,
+                        4066
+                    ],
+                    [
+                        4290,
+                        4296
+                    ]
+                ]
+            },
+            "Boeing Research & Technology India": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        4885,
+                        4919
+                    ]
+                ]
+            },
+            "Boeings": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        4502,
+                        4509
+                    ]
+                ]
+            },
+            "Boeings F/A-18": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        642,
+                        656
+                    ]
+                ]
+            },
+            "Boeings F/A-18 Super Hornet": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1769,
+                        1796
+                    ]
+                ]
+            },
+            "Chennai": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        5100,
+                        5107
+                    ]
+                ]
+            },
+            "Dassault Aviations Rafale": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        658,
+                        683
+                    ]
+                ]
+            },
+            "David Sutton": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        1408,
+                        1420
+                    ]
+                ]
+            },
+            "December": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        2660,
+                        2668
+                    ]
+                ]
+            },
+            "DefExpo": {
+                "entity_type": "PRODUCT",
+                "span": [
+                    [
+                        1566,
+                        1573
+                    ]
+                ]
+            },
+            "Defence": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        2626,
+                        2633
+                    ]
+                ]
+            },
+            "Defence Ministry": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1630,
+                        1646
+                    ]
+                ]
+            },
+            "Dennis Swanson": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        212,
+                        226
+                    ]
+                ]
+            },
+            "F/A-18": {
+                "entity_type": "FAC",
+                "span": [
+                    [
+                        2756,
+                        2762
+                    ]
+                ]
+            },
+            "February 5-9": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        384,
+                        396
+                    ],
+                    [
+                        1601,
+                        1613
+                    ]
+                ]
+            },
+            "GETPRO": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        5605,
+                        5611
+                    ]
+                ]
+            },
+            "Hyderabad": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        3828,
+                        3837
+                    ]
+                ]
+            },
+            "India": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        41,
+                        46
+                    ],
+                    [
+                        753,
+                        758
+                    ],
+                    [
+                        898,
+                        903
+                    ],
+                    [
+                        1159,
+                        1164
+                    ],
+                    [
+                        1847,
+                        1852
+                    ],
+                    [
+                        2196,
+                        2201
+                    ],
+                    [
+                        3446,
+                        3451
+                    ],
+                    [
+                        3733,
+                        3738
+                    ],
+                    [
+                        4028,
+                        4033
+                    ],
+                    [
+                        4162,
+                        4167
+                    ],
+                    [
+                        4331,
+                        4336
+                    ],
+                    [
+                        4553,
+                        4558
+                    ],
+                    [
+                        4792,
+                        4797
+                    ]
+                ]
+            },
+            "Indian": {
+                "entity_type": "NORP",
+                "span": [
+                    [
+                        2094,
+                        2100
+                    ],
+                    [
+                        2409,
+                        2415
+                    ],
+                    [
+                        2495,
+                        2501
+                    ],
+                    [
+                        3248,
+                        3254
+                    ],
+                    [
+                        3525,
+                        3531
+                    ],
+                    [
+                        3865,
+                        3871
+                    ],
+                    [
+                        5050,
+                        5056
+                    ]
+                ]
+            },
+            "International Sales": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        244,
+                        263
+                    ]
+                ]
+            },
+            "Lockheed Martin International": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1453,
+                        1482
+                    ]
+                ]
+            },
+            "Lockheeds F-21": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        626,
+                        640
+                    ]
+                ]
+            },
+            "Lucknow": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        371,
+                        378
+                    ],
+                    [
+                        1588,
+                        1595
+                    ]
+                ]
+            },
+            "Mig": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        727,
+                        730
+                    ]
+                ]
+            },
+            "Monday": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        1026,
+                        1032
+                    ]
+                ]
+            },
+            "Moneycontrol": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        5613,
+                        5625
+                    ],
+                    [
+                        5810,
+                        5822
+                    ]
+                ]
+            },
+            "Moneycontrol Pro": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        5535,
+                        5551
+                    ]
+                ]
+            },
+            "Naval Air Station Oceana": {
+                "entity_type": "FAC",
+                "span": [
+                    [
+                        2677,
+                        2701
+                    ]
+                ]
+            },
+            "Navy": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        2101,
+                        2105
+                    ]
+                ]
+            },
+            "Navys": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        2416,
+                        2421
+                    ]
+                ]
+            },
+            "New Delhi": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        1660,
+                        1669
+                    ]
+                ]
+            },
+            "Over 1,000": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        1485,
+                        1495
+                    ]
+                ]
+            },
+            "PTI": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1019,
+                        1022
+                    ]
+                ]
+            },
+            "Rajnath Singh": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        2643,
+                        2656
+                    ]
+                ]
+            },
+            "Russian": {
+                "entity_type": "NORP",
+                "span": [
+                    [
+                        710,
+                        717
+                    ]
+                ]
+            },
+            "Saabs Gripen": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        738,
+                        750
+                    ]
+                ]
+            },
+            "Swanson": {
+                "entity_type": "PERSON",
+                "span": [
+                    [
+                        1006,
+                        1013
+                    ],
+                    [
+                        1299,
+                        1306
+                    ],
+                    [
+                        1751,
+                        1758
+                    ],
+                    [
+                        2611,
+                        2618
+                    ],
+                    [
+                        2970,
+                        2977
+                    ],
+                    [
+                        3962,
+                        3969
+                    ],
+                    [
+                        4489,
+                        4496
+                    ],
+                    [
+                        5450,
+                        5457
+                    ]
+                ]
+            },
+            "The F/A-18": {
+                "entity_type": "PRODUCT",
+                "span": [
+                    [
+                        2985,
+                        2995
+                    ]
+                ]
+            },
+            "US": {
+                "entity_type": "GPE",
+                "span": [
+                    [
+                        0,
+                        2
+                    ],
+                    [
+                        2189,
+                        2191
+                    ],
+                    [
+                        2727,
+                        2729
+                    ],
+                    [
+                        3439,
+                        3441
+                    ],
+                    [
+                        4856,
+                        4858
+                    ]
+                ]
+            },
+            "US India Business Council": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1355,
+                        1380
+                    ]
+                ]
+            },
+            "USD 18 billion": {
+                "entity_type": "EVENT",
+                "span": [
+                    [
+                        495,
+                        509
+                    ]
+                ]
+            },
+            "billions of dollars": {
+                "entity_type": "MONEY",
+                "span": [
+                    [
+                        173,
+                        192
+                    ]
+                ]
+            },
+            "first year": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        5580,
+                        5590
+                    ]
+                ]
+            },
+            "more than 1,50,000": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        4462,
+                        4480
+                    ]
+                ]
+            },
+            "more than 7,000": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        4342,
+                        4357
+                    ]
+                ]
+            },
+            "nearly 70": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        1511,
+                        1520
+                    ]
+                ]
+            },
+            "one": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        521,
+                        524
+                    ],
+                    [
+                        762,
+                        765
+                    ],
+                    [
+                        847,
+                        850
+                    ]
+                ]
+            },
+            "recent years": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        571,
+                        583
+                    ]
+                ]
+            },
+            "the Asia Pacific Reassurance Initiative": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        3331,
+                        3370
+                    ]
+                ]
+            },
+            "the Department of Science and Technology": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        4680,
+                        4720
+                    ]
+                ]
+            },
+            "the Eurofighter Typhoon": {
+                "entity_type": "FAC",
+                "span": [
+                    [
+                        685,
+                        708
+                    ]
+                ]
+            },
+            "the F/A-18s": {
+                "entity_type": "PRODUCT",
+                "span": [
+                    [
+                        3219,
+                        3230
+                    ]
+                ]
+            },
+            "the Indian Air Force": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        409,
+                        429
+                    ],
+                    [
+                        3646,
+                        3666
+                    ]
+                ]
+            },
+            "the Indian Navy": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1937,
+                        1952
+                    ],
+                    [
+                        3671,
+                        3686
+                    ]
+                ]
+            },
+            "the Indo-Pacific": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        1435,
+                        1451
+                    ]
+                ]
+            },
+            "the Super Hornet Block III": {
+                "entity_type": "EVENT",
+                "span": [
+                    [
+                        2331,
+                        2357
+                    ]
+                ]
+            },
+            "the US Navy": {
+                "entity_type": "ORG",
+                "span": [
+                    [
+                        2851,
+                        2862
+                    ]
+                ]
+            },
+            "the last five years": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        4171,
+                        4190
+                    ]
+                ]
+            },
+            "this year": {
+                "entity_type": "DATE",
+                "span": [
+                    [
+                        5169,
+                        5178
+                    ]
+                ]
+            },
+            "two": {
+                "entity_type": "CARDINAL",
+                "span": [
+                    [
+                        2888,
+                        2891
+                    ]
+                ]
+            }
+        },
+        "full_text": "US aerospace giant Boeing has identified India as one of its top markets and critical to its international growth plans, eyeing the countrys plans to buy fighter jets worth billions of dollars.  The statement of Dennis Swanson, vice president, International Sales, Boeing Global Sales and Marketing came ahead of his visit to Indias mega defence exhibition to be held in Lucknow from February 5-9.  In April, the Indian Air Force issued an initial tender to acquire 114 jets at a cost of around USD 18 billion, billed as one of the worlds biggest military procurement in recent years.  The top contenders for the deal include Lockheeds F-21, Boeings F/A-18, Dassault Aviations Rafale, the Eurofighter Typhoon, Russian aircraft Mig 35 and Saabs Gripen.  India is one of the top markets for Boeing and critical to our international growth plans. As one of the fastest growing economies in the world, India offers growth and productivity opportunities, as well as talent and technology innovation advantages, Swanson told PTI on Monday.  Boeing has established a growing defence installation base, invested in manufacturing, skill development and engineering in India, and contributed to developing the aerospace and defence ecosystem that is being built on technology advancement and innovation, said Swanson, who is co-leading a high-powered delegation of US India Business Council to DefExpo 2020 along with David Sutton, director for the Indo-Pacific, Lockheed Martin International.  Over 1,000 companies from nearly 70 countries will take part in the biggest-ever DefExpo to be held in Lucknow from February 5-9, according to a Defence Ministry statement in New Delhi.  Responding to a question on Indias multi-billion fighter jet acquisition deal, Swanson said that Boeings F/A-18 Super Hornet is the latest Block III configuration that offers India the latest technologies and capabilities.  Our F/A-18 Super Hornet Block III offers the Indian Navy a unique and differentiated capability in the form of an advanced, combat proven, multi-role naval fighter that is fully compatible with the Indian Navy carriers and would boost the growing maritime and defence relationship between the US and India, he said.  Designed as a carrier-based fighter for high-loading, high stress operations with minimal support equipment required, the Super Hornet Block III is fully compliant with and ideally suited for the Indian Navys carrier deck, and as demonstrated in flight trials, it can take off from Indian aircraft carriers via ski jump. It is also compatible with air refuelling tankers operated around the world, Swanson said.  Defence Minister Rajnath Singh in December visited Naval Air Station Oceana on the invitation of the US government and toured the F/A-18 squadron and sat in an aircraft.  With the Super Hornet being the frontline fighter for the US Navy, cooperation between the two navies in naval aviation can result in the sharing of upgrades and knowledge, Swanson said.  The F/A-18 can unlock the potential of cooperation in naval aviation, with the sharing of best practices in modern naval aviation systems, carrier integration know-how, services and training and weapon systems, he said.  In addition, the F/A-18s integration with Indian carriers would demonstrate Indias commitment as a Major Defence Partner and the Asia Pacific Reassurance Initiative, serving as an important symbol of the new relationship between the US and India, he asserted.  Boeing, he said, has a long standing partnership with the Indian armed forces, with the C-17, Apache, Chinook and P-8I aircraft playing an important role in mission-readiness for the Indian Air Force and the Indian Navy.  With a supply chain of over 200 partners in India, and a joint venture with Tata that is manufacturing fuselages for Apache helicopters in Hyderabad, Boeing is partnering with Indian industry to grow the indigenous aerospace industry in the country, he said.  According to Swanson, over USD 1 billion of products and services sourced from India go into the most advanced Boeing aircraft across its commercial and defence businesses.  While we have quadrupled sourcing from India in the last five years, we are also investing in talent, training and skill development now and for the future, he said.  Boeing currently employs 3,500 people in India, and more than 7,000 people work with its supply chain partners, he said, noting that the company overall makes an impact on more than 1,50,000 lives.  Swanson said Boeings research and development (R&D) presence in India includes partnerships with research partners in academia, research laboratories and industry - including IITs, IISC, and the Department of Science and Technology.  It supports aerospace research and co-development of technologies in India to address future technical challenges in aerospace.  The US company has established a Boeing Research & Technology India (BIETC) center that conducts research in areas such as flight sciences, materials and processes, and structures and software with Indian research partners.  BIETC in Bengaluru and Chennai growing rapidly and is expected to employ 4,000 engineers by this year, he said.  Our engineers undertaking complex aerospace work to support diverse areas across the local and international ecosystem. They also perform engineering activities in the areas of mechanical, electrical and electronic engineering for current and future aircraft, Swanson added.  Get access to Indias fastest growing financial subscriptions service Moneycontrol Pro for as little as Rs 599 for first year. Use the code GETPRO. Moneycontrol Pro offers you all the information you need for wealth creation including actionable investment ideas, independent research and insights & analysis For more information, check out the Moneycontrol website or mobile app. "
+    }
+]
