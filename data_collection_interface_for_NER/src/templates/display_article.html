@@ -19,6 +19,7 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        // this dict has colors for each entity
         var entity_color_dict = {
         'PERSON': '#F08080', 'NORP': '#FF0000', 'FAC': '#FFB6C1',
            'ORG': '#DB7093', 'GPE': '#FF4500', 'LOC': '#FF7F50', 'PRODUCT': '#FFA500', 'EVENT': '#FFD700',
@@ -26,8 +27,9 @@
              'TIME': '#ADFF2F', 'PERCENT': '#00FF00', 'MONEY': '#90EE90', 'QUANTITY': '#9ACD32',
               'ORDINAL': '#20B2AA', 'CARDINAL': '#F4A460'}
 
-
+        // function to divide text according to the spans in annotation data
         function set_bgc_method(features, spans, spans_start_index, id, entity_color_dict){
+            // divinding text into parts using spans of entities
             for (let key in features){
                 var span_array = features[key].span;
                 for(var i = 0; i < span_array.length; i++){
@@ -57,6 +59,8 @@
 
                 }
             }
+            // setting background colors to each of the components via spans and joining them
+            // should there be a hover checklist in future, it should be here
             var para = document.getElementById(id);
             var set_bgc_for_span = []
             for(var x = 0; x < spans.length; x++){
@@ -97,9 +101,11 @@
 </form>
     <button type = 'button'  onclick="next_article()"  id = "next_article" >View Next</button>
 <script type="text/javascript" defer >
+// function to direct page into next article
 function next_article(){
     window.location = Flask.url_for("display_article", {});
 }
+// function to make json readable
 function decodeHTML(annotation_data) {
     var txt = document.createElement("textArea");
     txt.innerHTML = annotation_data;
@@ -107,7 +113,7 @@ function decodeHTML(annotation_data) {
 }
     var annotation_data = "{{annotation_data_json}}";
     annotation_data = JSON.parse(decodeHTML(annotation_data));
-
+// using annotation data to create variables that act as inputs for the function
     headline = annotation_data[0];  article = annotation_data[1];
     headline_text = headline["headline"];   article_text = article["full_text"];
     headline_features = headline["features"];   article_features = article["features"];
@@ -120,14 +126,14 @@ function decodeHTML(annotation_data) {
     set_bgc_method(article_features, article_spans, article_spans_start_index, 'article', entity_color_dict);
     set_bgc_method(headline_features, headline_spans, headline_spans_start_index, 'headline', entity_color_dict);
 
-
+// to create checkboxes for all the entities
     var curDiv = document.querySelector('#checkboxes');
     for(entityType in entity_color_dict){
         var checkDiv = document.createElement('div');
         checkDiv.id = entityType + 'CheckboxDiv';
         var i = 0;
         var h3 = document.createElement('h3');
-        h3.appendChild(document.createTextNode('Pick the '+ entityType));
+        h3.appendChild(document.createTextNode('Select the appropriate '+ entityType));
         checkDiv.class = 'checkboxes'
         for(key in article_features){
             if(article_features[key].entity_type == entityType){
@@ -149,7 +155,7 @@ function decodeHTML(annotation_data) {
         curDiv.appendChild(checkDiv);
     }
 
-
+// submit the data into the server
     $('#submit').click(function() {
         var entity_color_dict = window.entity_color_dict;
         alert(entity_color_dict);
